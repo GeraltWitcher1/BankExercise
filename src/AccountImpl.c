@@ -24,9 +24,10 @@ account_t account_create(int accountNo, double creditLimit) {
     return _newAccount;
 }
 
-void account_destroy(account_t self) {
-    if (NULL != self) {
-        free(self);
+void account_destroy(account_t* self) {
+    if (NULL != *self) {
+        free(*self);
+        *self = NULL;
     }
 }
 

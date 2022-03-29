@@ -19,8 +19,12 @@ int main() {
 
     printf("%s \n", _account_status_text[account_withDraw(myAccount,300)]);
 
-    account_destroy(myAccount);
-    myAccount = NULL;
+    printf("%d \n", myAccount);
+
+    account_destroy(&myAccount);
+//    myAccount = NULL;
+
+    printf("%d \n", myAccount);
 
     printf("%s \n", _account_status_text[account_deposit(myAccount,100)]);
 

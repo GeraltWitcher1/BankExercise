@@ -14,7 +14,7 @@ typedef enum AccountStatus{
 
 account_t account_create(int accountNo, double creditLimit);
 
-void account_destroy(account_t self);
+void account_destroy(account_t* self);
 
 AccountStatus account_withDraw(account_t self, double amount);
 
